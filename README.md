@@ -1,7 +1,7 @@
 
 # `Web3 Player`
 
-This project is our submission for Etherenals, an ETHIndia Hackathon. We are making a web3 player which benefits both users and creators with different technologies.
+This project is our submission for HackMoney2022, an ETHGlobal Hackathon. We are making a web3 player which benefits both users and creators with different technologies.
 
 # `Technologies`
 
