@@ -173,6 +173,31 @@ const MintMusic = () => {
 
         const input = `ipfs://${metadataHash}`;
         
+        const options = {
+                            method: 'POST',
+                            url: 'https://api.covalenthq.com/v1',
+                              headers: {
+                                'Content-Type': 'application/json',
+                                Authorization: '7691f6a6-916b-4d40-8970-66c6df1e2eb5'
+                              },
+                              data: {
+                                name: name,
+                                artist: artist,
+                                year: year,
+                                image: "/ipfs/" + imageHash,
+                                animation_url: "/ipfs/" + musicHash,
+                                type: "music"
+                              }
+                            };
+                            
+                            axios.request(options).then(function (response) {
+                            console.log(response.data.metadata_uri);
+                            setMetaDataURI(response.data.metadata_uri)
+
+                            }).catch(function (error) {
+                              console.error(error);
+                        });
+        
 
         // **************** WITH BICONOMY START ***************** //
         const transactionParams = {
